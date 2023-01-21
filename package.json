@@ -1,0 +1,32 @@
+{
+  "name": "svelte-electron-node-adapter",
+  "version": "0.0.1",
+  "description": "Simple example of SvelteKit with Electron using Node Adapter.",
+  "main": "./index.cjs",
+  "scripts": {
+    "dev:all": "concurrently \"npm run dev:svelte\" \"npm run dev:electron\" ",
+    "dev:electron": "electron .",
+    "dev:svelte": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --prune=true --out=release-builds",
+    "package-win": "electron-packager . --overwrite --platform=win32 --arch=x64 --prune=true --out=release-builds/win"
+  },
+  "devDependencies": {
+    "@fontsource/fira-mono": "^4.5.10",
+    "@neoconfetti/svelte": "^1.0.0",
+    "@sveltejs/adapter-auto": "^1.0.0",
+    "@sveltejs/adapter-node": "^1.1.4",
+    "@sveltejs/kit": "^1.0.0",
+    "concurrently": "^7.6.0",
+    "dotenv": "^16.0.3",
+    "electron": "^22.0.3",
+    "electron-packager": "^17.1.1",
+    "svelte": "^3.54.0",
+    "vite": "^4.0.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "electron-log": "^4.4.8"
+  }
+}
